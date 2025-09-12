@@ -68,3 +68,6 @@ print(f'jung 이 있는가? {yn}')
 dic.update({'name':'홍길동','age':30, 'married':False})
 print(dic)
 
+# dic.clear() : 사전 안의 내용을 모두 지운다.
+dic.clear()
+print(dic)
