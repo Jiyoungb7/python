@@ -37,3 +37,34 @@ for key in dic.keys():
 # 2. 키와 값을 동시에 뽑아낸 다음 거기서 키와 값을 각각 추출하는 방식
 for item in dic.items():
     print(f'{item[0]}:{item[1]}')
+
+
+members = {
+    'kim':63, 'lee':88, 'park':97, "gang":77, "hwang":100, "ga":65,
+    "na":92, "la":90, "wang":100, "gu":79
+}
+
+# 90이상인 사람의 이름만 출력
+for name in members.keys():
+    if members[name] >= 90:
+        print(f'90 이상인 사람 : {name}')
+
+print('and')
+
+for name in members.items():
+    if name[1] >= 90:
+        print(f'90 이상인 사람 : {name[0]}')
+
+
+# key in dic : 해당 키가 사전에 존재하는지 확인
+# 검색 시작여부를 결정할 수 있는 방법
+yn = 'kim' in members
+print(f'kim 이 있는가? {yn}')
+
+yn = 'jung' in members
+print(f'jung 이 있는가? {yn}')
+
+# update : 이미 있는 키면 수정을, 없는 키면 추가를 하는 함수
+dic.update({'name':'홍길동','age':30, 'married':False})
+print(dic)
+
