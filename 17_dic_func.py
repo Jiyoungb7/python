@@ -1,3 +1,5 @@
+from collections.abc import dict_keys
+
 dic = {'name':'hon,gil-dong', 'phone':'010-1234-1234', 'friends':['Alice', 'Smith', 'Jhone']}
 
 # dic.keys() : 특정한 사전의 키들만 가져와 dict_keys 라는 객체를 반환한다.
@@ -22,3 +24,16 @@ print(dic.items())
 # list로 변환해 보면 list 안에 각 키와 값이 튜플로 저장되어 있음을 알 수 있다.
 li = list(dic.items())
 print(li)
+
+# 값을 가져오기 (택1)
+print(dic.get('name'))
+print(dic['phone'])
+
+# dic 안에 있는 모든 키와 값을 키:값 형태로 출력해보자.
+# 1. 키를 뽑아낸 다음, 키를 가지고 값을 뽑아내는 방법
+for key in dic.keys():
+    print(f'{key}:{dic[key]}')
+
+# 2. 키와 값을 동시에 뽑아낸 다음 거기서 키와 값을 각각 추출하는 방식
+for item in dic.items():
+    print(f'{item[0]}:{item[1]}')
